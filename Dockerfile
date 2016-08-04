@@ -25,7 +25,9 @@ ENV DEBIAN_FRONTEND noninteractive
 
 USER root
 RUN apt-get update && apt-get upgrade -y; \
-    apt-get -y install librsvg2-bin; \
+    apt-get -y install librsvg2-bin \
+        pkg-config \
+        libcairo2-dev; \
     apt-get clean
 
 ################################################################################
